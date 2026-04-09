@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ShoppingBag, Menu, X } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { useCartStore } from "@/store/cartStore";
@@ -13,24 +14,6 @@ const NAV_LINKS = [
   { href: "/#contact", label: "تواصل معنا" },
 ];
 
-function PharmacyCrossLogo() {
-  return (
-    <svg
-      width="34"
-      height="34"
-      viewBox="0 0 34 34"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <rect width="34" height="34" rx="8" fill="#1B8C3A" />
-      <path
-        d="M13.5 7H20.5V13.5H27V20.5H20.5V27H13.5V20.5H7V13.5H13.5V7Z"
-        fill="white"
-      />
-    </svg>
-  );
-}
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -68,7 +51,14 @@ export default function Navbar() {
               ليوة — الوادي
             </span>
           </div>
-          <PharmacyCrossLogo />
+          <Image
+            src="/logo.png"
+            alt="شعار صيدلية كيلالا"
+            width={38}
+            height={38}
+            className="rounded-lg object-contain flex-shrink-0"
+            priority
+          />
         </Link>
 
 

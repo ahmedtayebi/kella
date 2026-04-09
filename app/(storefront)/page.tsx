@@ -224,16 +224,18 @@ function HeroIllustration() {
         />
       ))}
 
-      {/* Large pharmacy cross — center */}
+      {/* Logo — center */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <svg width="220" height="220" viewBox="0 0 220 220" fill="none">
-          {/* Cross shape */}
-          <rect x="77" y="20" width="66" height="180" rx="16" fill="#1B8C3A" fillOpacity="0.10" />
-          <rect x="20" y="77" width="180" height="66" rx="16" fill="#1B8C3A" fillOpacity="0.10" />
-          {/* Inner cross (slightly lighter) */}
-          <rect x="87" y="30" width="46" height="160" rx="10" fill="#1B8C3A" fillOpacity="0.08" />
-          <rect x="30" y="87" width="160" height="46" rx="10" fill="#1B8C3A" fillOpacity="0.08" />
-        </svg>
+        <div className="w-[200px] h-[200px]      flex items-center justify-center">
+          <Image
+            src="/logo.png"
+            alt="شعار صيدلية كيلالا"
+            width={150}
+            height={150}
+            className="object-contain"
+            priority
+          />
+        </div>
       </div>
 
       {/* Floating pill card — top left */}
@@ -626,11 +628,13 @@ function AboutIllustration() {
 
       {/* Main card */}
       <div className="absolute inset-0 bg-[var(--color-primary-50)] rounded-[2rem] border border-[var(--color-primary-100)] overflow-hidden flex items-center justify-center">
-        {/* Pharmacy cross watermark */}
-        <svg width="200" height="200" viewBox="0 0 220 220" fill="none" opacity="0.15">
-          <rect x="77" y="20" width="66" height="180" rx="16" fill="#1B8C3A" />
-          <rect x="20" y="77" width="180" height="66" rx="16" fill="#1B8C3A" />
-        </svg>
+        <Image
+          src="/logo.png"
+          alt="شعار صيدلية كيلالا"
+          width={220}
+          height={220}
+          className="object-contain p-6"
+        />
       </div>
 
       {/* Pill icon card — top */}
